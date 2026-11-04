@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sample directory of waste collectors, monthly tariffs and plastic buy-back points in Kampala.">
+  <title>Collectors & Tariffs | Kampala CleanConnect</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Demo Notice Strip (Member 1: Stephen Asiimwe) -->
+  <div class="alert-bar">
+    [SAMPLE ALERT] Example notice: crews clearing drainage culverts along Lubigi Channel in Kawempe. Report blockages below.
+  </div>
+
+  <!-- Global Header & Navigation (Members 1 & 12: Stephen Asiimwe & Brian Ochieng) -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="brand">
+        <span class="brand-title">KAMPALA CLEANCONNECT</span>
+        <span class="brand-sub">Community Solid Waste Monitoring &amp; Recycling Portal</span>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-btn">&#9776; Menu</label>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="report.html" class="btn-report">Report Waste</a></li>
+          <li><a href="directory.html" class="active" aria-current="page">Collectors &amp; Tariffs</a></li>
+          <li><a href="guide.html">Sorting Guide</a></li>
+          <li><a href="cleanups.html">Cleanups Hub</a></li>
+          <li><a href="dashboard.html">City Status</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li aria-current="page">Collectors &amp; Tariffs</li>
+      </ol>
+    </nav>
+
+    <h1 class="section-title">Waste Collectors, Tariffs &amp; Recyclers</h1>
+    <p class="section-sub">Find a collector for your division, compare sample monthly rates, and locate plastic buy-back points.</p>
+
+    <p class="data-notice"><strong>Sample data:</strong> company names, phone numbers, rates and prices on this page are illustrative placeholders made for the coursework demo. They are not real KCCA records. Confirm real collectors and fees with KCCA.</p>
+
+    <!-- Search & Filter Bar (Member 5: Patience Atuhaire) -->
+    <div class="filter-bar">
+      <label for="filter-div">Filter by Division:</label>
+      <select id="filter-div" class="form-control" onchange="filterHaulers()">
+        <option value="all">All Divisions</option>
+        <option value="kawempe">Kawempe Division</option>
+        <option value="makindye">Makindye Division</option>
+        <option value="rubaga">Rubaga Division</option>
+        <option value="nakawa">Nakawa Division</option>
+        <option value="central">Central Division</option>
+        <option value="kasangati">Kasangati Town Council</option>
+      </select>
+      <button type="button" class="btn btn-primary" onclick="filterHaulers()">Filter Results</button>
+    </div>
+    <p id="filter-msg" class="filter-msg" aria-live="polite">Showing all collectors.</p>
+
+    <!-- Collectors Table (Member 6: Emmanuel Okello) -->
+    <h2 class="sub-title">1. Waste Collectors Directory (Sample)</h2>
+    <div class="table-wrap">
+    <table class="data-table" id="haulers-table">
+      <thead>
+        <tr>
+          <th>Company Name</th>
+          <th>Operating Division</th>
+          <th>Weekly Collection Days</th>
+          <th>Contact Number</th>
+          <th>Customer Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-division="central rubaga">
+          <td><strong>Central-Rubaga Clean Haulers</strong></td>
+          <td>Kampala Central &amp; Rubaga</td>
+          <td>Mondays &amp; Thursdays</td>
+          <td><a href="tel:+256700000101">+256 700 000 101</a></td>
+          <td>Households &amp; shops</td>
+        </tr>
+        <tr data-division="makindye">
+          <td><strong>Makindye Kleen Services</strong></td>
+          <td>Makindye Division</td>
+          <td>Tuesdays &amp; Fridays</td>
+          <td><a href="tel:+256700000102">+256 700 000 102</a></td>
+          <td>Households</td>
+        </tr>
+        <tr data-division="kawempe">
+          <td><strong>Kalerwe Green Sanitation</strong></td>
+          <td>Kawempe Division (Kalerwe, Bwaise)</td>
+          <td>Wednesdays &amp; Saturdays</td>
+          <td><a href="tel:+256700000103">+256 700 000 103</a></td>
+          <td>Households &amp; market stalls</td>
+        </tr>
+        <tr data-division="nakawa">
+          <td><strong>Nakawa Kasasiro Express</strong></td>
+          <td>Nakawa Division (Ntinda, Kyambogo)</td>
+          <td>Mondays &amp; Fridays</td>
+          <td><a href="tel:+256700000104">+256 700 000 104</a></td>
+          <td>Households &amp; shops</td>
+        </tr>
+        <tr data-division="kasangati">
+          <td><strong>Kasangati Waste Services</strong></td>
+          <td>Kasangati Town Council &amp; Wakiso</td>
+          <td>Tuesdays &amp; Saturdays</td>
+          <td><a href="tel:+256700000105">+256 700 000 105</a></td>
+          <td>Households</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <!-- Tariff Matrix (Member 7: Sarah Kembabazi) -->
+    <h2 class="sub-title">2. Sample Monthly Tariff Schedule</h2>
+    <p class="table-intro">Illustrative monthly collection rates used to show how a fair-price table would look. Real fees should be confirmed with KCCA before paying.</p>
+    <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Household / Customer Category</th>
+          <th>Volume Allowance</th>
+          <th>Sample Monthly Fee (UGX)</th>
+          <th>Collection Frequency</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Low-Income Informal Household (Muzigo)</td>
+          <td>Up to 2 sacks / month</td>
+          <td><strong>UGX 10,000 - 15,000</strong></td>
+          <td>Once a week</td>
+        </tr>
+        <tr>
+          <td>Standard Residential House (Self-Contained)</td>
+          <td>Up to 4 sacks / month</td>
+          <td><strong>UGX 20,000 - 30,000</strong></td>
+          <td>Twice a week</td>
+        </tr>
+        <tr>
+          <td>Small Commercial Shop / Salon</td>
+          <td>Up to 4 sacks / month</td>
+          <td><strong>UGX 25,000 - 35,000</strong></td>
+          <td>Twice a week</td>
+        </tr>
+        <tr>
+          <td>Restaurant / Market Vendor Stall</td>
+          <td>Bulk daily collection</td>
+          <td><strong>UGX 40,000 - 60,000</strong></td>
+          <td>3 times a week</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <!-- Recyclers Directory (CI-15, Member 7: Sarah Kembabazi) -->
+    <h2 class="sub-title">3. Plastic Buy-Back Points &amp; Scrap Depots (Sample)</h2>
+    <p class="table-intro">Where sorted plastic and scrap can be sold. Prices change often, so ask the depot before you carry a load.</p>
+    <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Depot Name</th>
+          <th>Division</th>
+          <th>Accepts</th>
+          <th>Contact Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Kalerwe Plastic Buy-Back Point</strong></td>
+          <td>Kawempe</td>
+          <td>PET bottles, HDPE jerrycans</td>
+          <td><a href="tel:+256700000201">+256 700 000 201</a></td>
+        </tr>
+        <tr>
+          <td><strong>Katwe Scrap Metal Depot</strong></td>
+          <td>Makindye</td>
+          <td>Scrap metal, cans</td>
+          <td><a href="tel:+256700000202">+256 700 000 202</a></td>
+        </tr>
+        <tr>
+          <td><strong>Ntinda Recycling Collection Point</strong></td>
+          <td>Nakawa</td>
+          <td>Plastic bottles, paper, glass</td>
+          <td><a href="tel:+256700000203">+256 700 000 203</a></td>
+        </tr>
+        <tr>
+          <td><strong>Busega Community Recycling Hub</strong></td>
+          <td>Rubaga</td>
+          <td>Plastic, polythene bundles</td>
+          <td><a href="tel:+256700000204">+256 700 000 204</a></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </main>
+
+  <script>
+    // Shows only the collector rows that serve the chosen division.
+    function filterHaulers() {
+      var chosen = document.getElementById('filter-div').value;
+      var rows = document.querySelectorAll('#haulers-table tbody tr');
+      var shown = 0;
+      for (var i = 0; i < rows.length; i++) {
+        var divisions = rows[i].getAttribute('data-division').split(' ');
+        var match = (chosen === 'all') || (divisions.indexOf(chosen) !== -1);
+        rows[i].style.display = match ? '' : 'none';
+        if (match) { shown++; }
+      }
+      document.getElementById('filter-msg').textContent = 'Showing ' + shown + ' of ' + rows.length + ' collectors.';
+    }
+  </script>
+
+  <!-- Global Footer (Member 12: Brian Ochieng) -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>About Kampala CleanConnect</h4>
+        <p>A student-built portal responding to Greater Kampala's waste problem after the Kiteezi landfill collapse. Built for Victoria University Coursework Project 2.</p>
+        <p class="footer-note"><strong>Demo notice:</strong> this site has no live hotline. Listings, numbers and figures are sample data. For real sanitation issues, contact KCCA through kcca.go.ug.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home Portal</a></li>
+          <li><a href="report.html">Report Illegal Dumpsite</a></li>
+          <li><a href="directory.html">Collectors, Tariffs &amp; Recyclers</a></li>
+          <li><a href="guide.html">Waste Sorting &amp; Composting</a></li>
+          <li><a href="cleanups.html">Community Clean-Up Drives</a></li>
+          <li><a href="dashboard.html">City Status Dashboard</a></li>
+          <li><a href="about.html#sources">Sources &amp; Credits</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Academic Project Notice</h4>
+        <p>Victoria University Kampala</p>
+        <p>Faculty of Science &amp; Technology</p>
+        <p>Module: Internet Technology &amp; Web Design</p>
+        <p>Facilitator: Olivia Najjemba</p>
+        <p>Group 12 (Lead: Stephen Asiimwe)</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Kampala CleanConnect &bull; Victoria University Group Project 2 &bull; Hosted on GitHub Pages
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sample dashboard showing reports logged, cleanups resolved and division performance.">
+  <title>City Status | Kampala CleanConnect</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Demo Notice Strip (Member 1: Stephen Asiimwe) -->
+  <div class="alert-bar">
+    [SAMPLE ALERT] Example notice: crews clearing drainage culverts along Lubigi Channel in Kawempe. Report blockages below.
+  </div>
+
+  <!-- Global Header & Navigation (Members 1 & 12: Stephen Asiimwe & Brian Ochieng) -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="brand">
+        <span class="brand-title">KAMPALA CLEANCONNECT</span>
+        <span class="brand-sub">Community Solid Waste Monitoring &amp; Recycling Portal</span>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-btn">&#9776; Menu</label>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="report.html" class="btn-report">Report Waste</a></li>
+          <li><a href="directory.html">Collectors &amp; Tariffs</a></li>
+          <li><a href="guide.html">Sorting Guide</a></li>
+          <li><a href="cleanups.html">Cleanups Hub</a></li>
+          <li><a href="dashboard.html" class="active" aria-current="page">City Status</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li aria-current="page">City Status</li>
+      </ol>
+    </nav>
+
+    <h1 class="section-title">City Sanitation Status &amp; Resolution Dashboard</h1>
+    <p class="section-sub">A public view of complaints logged, cleanups done, and how each division is performing.</p>
+
+    <p class="data-notice"><strong>Sample data:</strong> every figure on this page is an example used to show how the dashboard would work. It is not real KCCA data.</p>
+
+    <!-- Executive Metrics Grid (Member 12: Brian Ochieng) -->
+    <div class="stat-grid stat-grid-4">
+      <div class="stat-box stat-white">
+        <span class="stat-num">1,428</span>
+        <span class="stat-label">Total Reports Logged</span>
+      </div>
+      <div class="stat-box stat-white">
+        <span class="stat-num stat-green">1,194</span>
+        <span class="stat-label">Resolved Cleanups</span>
+      </div>
+      <div class="stat-box stat-white">
+        <span class="stat-num stat-red">234</span>
+        <span class="stat-label">In-Progress Hotspots</span>
+      </div>
+      <div class="stat-box stat-white">
+        <span class="stat-num stat-blue">83.6%</span>
+        <span class="stat-label">Citywide Resolution Rate</span>
+      </div>
+    </div>
+
+    <!-- Division Performance Table (Member 12: Brian Ochieng) -->
+    <h2 class="sub-title">Division Performance Breakdown</h2>
+    <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Division Name</th>
+          <th>Total Complaints Logged</th>
+          <th>Cleaned &amp; Resolved</th>
+          <th>Pending Dispatch</th>
+          <th>Drainage Cleared</th>
+          <th>Resolution Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Kawempe Division</strong></td>
+          <td>420</td>
+          <td>348</td>
+          <td>72</td>
+          <td>16.4 km</td>
+          <td><strong>82.9%</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Makindye Division</strong></td>
+          <td>310</td>
+          <td>265</td>
+          <td>45</td>
+          <td>11.2 km</td>
+          <td><strong>85.5%</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Rubaga Division</strong></td>
+          <td>290</td>
+          <td>242</td>
+          <td>48</td>
+          <td>9.8 km</td>
+          <td><strong>83.4%</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Nakawa Division</strong></td>
+          <td>245</td>
+          <td>215</td>
+          <td>30</td>
+          <td>7.6 km</td>
+          <td><strong>87.8%</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Kampala Central</strong></td>
+          <td>163</td>
+          <td>124</td>
+          <td>39</td>
+          <td>3.2 km</td>
+          <td><strong>76.1%</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </main>
+
+  <!-- Global Footer (Member 12: Brian Ochieng) -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>About Kampala CleanConnect</h4>
+        <p>A student-built portal responding to Greater Kampala's waste problem after the Kiteezi landfill collapse. Built for Victoria University Coursework Project 2.</p>
+        <p class="footer-note"><strong>Demo notice:</strong> this site has no live hotline. Listings, numbers and figures are sample data. For real sanitation issues, contact KCCA through kcca.go.ug.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home Portal</a></li>
+          <li><a href="report.html">Report Illegal Dumpsite</a></li>
+          <li><a href="directory.html">Collectors, Tariffs &amp; Recyclers</a></li>
+          <li><a href="guide.html">Waste Sorting &amp; Composting</a></li>
+          <li><a href="cleanups.html">Community Clean-Up Drives</a></li>
+          <li><a href="dashboard.html">City Status Dashboard</a></li>
+          <li><a href="about.html#sources">Sources &amp; Credits</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Academic Project Notice</h4>
+        <p>Victoria University Kampala</p>
+        <p>Faculty of Science &amp; Technology</p>
+        <p>Module: Internet Technology &amp; Web Design</p>
+        <p>Facilitator: Olivia Najjemba</p>
+        <p>Group 12 (Lead: Stephen Asiimwe)</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Kampala CleanConnect &bull; Victoria University Group Project 2 &bull; Hosted on GitHub Pages
+    </div>
+  </footer>
+
+</body>
+</html>

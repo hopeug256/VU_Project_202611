@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Report an illegal dumpsite or blocked drain in Kampala with location, waste type and a photo.">
+  <title>Report Waste | Kampala CleanConnect</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Demo Notice Strip (Member 1: Stephen Asiimwe) -->
+  <div class="alert-bar">
+    [SAMPLE ALERT] Example notice: crews clearing drainage culverts along Lubigi Channel in Kawempe. Report blockages below.
+  </div>
+
+  <!-- Global Header & Navigation (Members 1 & 12: Stephen Asiimwe & Brian Ochieng) -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="brand">
+        <span class="brand-title">KAMPALA CLEANCONNECT</span>
+        <span class="brand-sub">Community Solid Waste Monitoring &amp; Recycling Portal</span>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-btn">&#9776; Menu</label>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="report.html" class="btn-report active" aria-current="page">Report Waste</a></li>
+          <li><a href="directory.html">Collectors &amp; Tariffs</a></li>
+          <li><a href="guide.html">Sorting Guide</a></li>
+          <li><a href="cleanups.html">Cleanups Hub</a></li>
+          <li><a href="dashboard.html">City Status</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li aria-current="page">Report Waste</li>
+      </ol>
+    </nav>
+
+    <h1 class="section-title">Report an Illegal Dumpsite or Blocked Drain</h1>
+    <p class="section-sub">Help local councils pinpoint uncollected waste hot-spots across Greater Kampala. (Demo form: nothing is sent anywhere.)</p>
+
+    <div class="form-box">
+      <form action="#" method="post" onsubmit="alert('Demo only: report logged. Reference ticket: KCC-2026-KW-014.'); return false;">
+
+        <!-- Incident Location (Member 3: Joshua Kato) -->
+        <fieldset>
+          <legend>1. Incident Location</legend>
+
+          <div class="form-group">
+            <label for="division">Select Municipality / Division *</label>
+            <select id="division" name="division" class="form-control" required>
+              <option value="">-- Choose Division --</option>
+              <option value="kawempe">Kawempe Division</option>
+              <option value="makindye">Makindye Division</option>
+              <option value="rubaga">Rubaga Division</option>
+              <option value="nakawa">Nakawa Division</option>
+              <option value="central">Kampala Central Division</option>
+              <option value="kasangati">Kasangati Town Council (Wakiso)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="parish">Parish / Zone / LC1 Area *</label>
+            <input type="text" id="parish" name="parish" class="form-control" placeholder="e.g., Kalerwe Market Zone, Bwaise II, Makerere III" required>
+          </div>
+
+          <div class="form-group">
+            <label for="landmark">Nearby Landmark / Street Description</label>
+            <textarea id="landmark" name="landmark" class="form-control" rows="2" placeholder="e.g., Opposite the timber stalls along Northern Bypass culvert..."></textarea>
+          </div>
+        </fieldset>
+
+        <!-- Incident Details & Photo (Member 4: Derrick Mugisha) -->
+        <fieldset>
+          <legend>2. Waste Classification &amp; Evidence</legend>
+
+          <div class="form-group">
+            <span class="field-label">Incident Type *</span>
+            <div class="radio-group">
+              <label class="radio-label"><input type="radio" name="incident_type" value="roadside_dump" required checked> Illegal Roadside Dump</label>
+              <label class="radio-label"><input type="radio" name="incident_type" value="blocked_drain"> Blocked Culvert / Drainage</label>
+              <label class="radio-label"><input type="radio" name="incident_type" value="overflow_skip"> Overflowing Public Skip</label>
+              <label class="radio-label"><input type="radio" name="incident_type" value="toxic"> Hazardous Scrap</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <span class="field-label">Estimated Refuse Volume *</span>
+            <div class="radio-group">
+              <label class="radio-label"><input type="radio" name="volume" value="small"> Small (Wheelbarrow)</label>
+              <label class="radio-label"><input type="radio" name="volume" value="medium" checked> Medium (Pickup Truck / ~1 Ton)</label>
+              <label class="radio-label"><input type="radio" name="volume" value="large"> Large (Multi-Ton / Road Blocked)</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="photo">Upload Photo Evidence (JPG/PNG)</label>
+            <input type="file" id="photo" name="photo" class="form-control" accept="image/*">
+            <small class="hint">You can snap a photo directly using your smartphone camera.</small>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-label urgent">
+              <input type="checkbox" name="flood_risk"> Urgent: Drainage blocked causing active flooding risk
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Privacy & Notification -->
+        <fieldset>
+          <legend>3. Privacy &amp; Notifications</legend>
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="anonymous" checked> Submit Anonymously (No personal name required)
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="phone">Optional Phone Number for SMS Updates</label>
+            <input type="tel" id="phone" name="phone" class="form-control" placeholder="e.g., 0770 123 456">
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="reset" class="btn btn-outline">Reset Form</button>
+          <button type="submit" class="btn btn-alert">Submit Incident Report &rarr;</button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <!-- Global Footer (Member 12: Brian Ochieng) -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>About Kampala CleanConnect</h4>
+        <p>A student-built portal responding to Greater Kampala's waste problem after the Kiteezi landfill collapse. Built for Victoria University Coursework Project 2.</p>
+        <p class="footer-note"><strong>Demo notice:</strong> this site has no live hotline. Listings, numbers and figures are sample data. For real sanitation issues, contact KCCA through kcca.go.ug.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home Portal</a></li>
+          <li><a href="report.html">Report Illegal Dumpsite</a></li>
+          <li><a href="directory.html">Collectors, Tariffs &amp; Recyclers</a></li>
+          <li><a href="guide.html">Waste Sorting &amp; Composting</a></li>
+          <li><a href="cleanups.html">Community Clean-Up Drives</a></li>
+          <li><a href="dashboard.html">City Status Dashboard</a></li>
+          <li><a href="about.html#sources">Sources &amp; Credits</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Academic Project Notice</h4>
+        <p>Victoria University Kampala</p>
+        <p>Faculty of Science &amp; Technology</p>
+        <p>Module: Internet Technology &amp; Web Design</p>
+        <p>Facilitator: Olivia Najjemba</p>
+        <p>Group 12 (Lead: Stephen Asiimwe)</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Kampala CleanConnect &bull; Victoria University Group Project 2 &bull; Hosted on GitHub Pages
+    </div>
+  </footer>
+
+</body>
+</html>

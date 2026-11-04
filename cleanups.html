@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calendar of community cleanup drives and a tool bank loan request form for LC1 leaders.">
+  <title>Cleanups Hub | Kampala CleanConnect</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Demo Notice Strip (Member 1: Stephen Asiimwe) -->
+  <div class="alert-bar">
+    [SAMPLE ALERT] Example notice: crews clearing drainage culverts along Lubigi Channel in Kawempe. Report blockages below.
+  </div>
+
+  <!-- Global Header & Navigation (Members 1 & 12: Stephen Asiimwe & Brian Ochieng) -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="brand">
+        <span class="brand-title">KAMPALA CLEANCONNECT</span>
+        <span class="brand-sub">Community Solid Waste Monitoring &amp; Recycling Portal</span>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-btn">&#9776; Menu</label>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="report.html" class="btn-report">Report Waste</a></li>
+          <li><a href="directory.html">Collectors &amp; Tariffs</a></li>
+          <li><a href="guide.html">Sorting Guide</a></li>
+          <li><a href="cleanups.html" class="active" aria-current="page">Cleanups Hub</a></li>
+          <li><a href="dashboard.html">City Status</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li aria-current="page">Cleanups Hub</li>
+      </ol>
+    </nav>
+
+    <h1 class="section-title">Community Clean-Up Drives &amp; Tool Bank Hub</h1>
+    <p class="section-sub">Mobilizing neighborhood youth, market vendors, and local leaders for voluntary <em>Bulungi Bwansi</em> sanitation campaigns.</p>
+
+    <p class="data-notice"><strong>Sample data:</strong> the events and the tool bank below are examples made for the coursework demo.</p>
+
+    <!-- Cleanups Calendar (Member 10: Faith Nabirye) -->
+    <h2 class="sub-title">1. Upcoming Parish Cleanups Calendar</h2>
+    <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Event Date</th>
+          <th>Division &amp; Parish</th>
+          <th>Meeting Point</th>
+          <th>Focus Activity</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Sat, 14 Nov 2026</strong> (8:00 AM)</td>
+          <td>Kawempe &bull; Kalerwe Parish</td>
+          <td>Kalerwe Market LC1 Office</td>
+          <td>Unclogging roadside drainage culverts</td>
+          <td><button type="button" class="btn btn-primary btn-small" onclick="alert('Demo only: you are registered as a volunteer for the Kalerwe cleanup!');">Join as Volunteer</button></td>
+        </tr>
+        <tr>
+          <td><strong>Sat, 21 Nov 2026</strong> (8:00 AM)</td>
+          <td>Makindye &bull; Katwe I Parish</td>
+          <td>Katwe Community Center</td>
+          <td>Removing plastic waste along railway berm</td>
+          <td><button type="button" class="btn btn-primary btn-small" onclick="alert('Demo only: you are registered as a volunteer for the Katwe cleanup!');">Join as Volunteer</button></td>
+        </tr>
+        <tr>
+          <td><strong>Sat, 28 Nov 2026</strong> (8:00 AM)</td>
+          <td>Rubaga &bull; Busega Parish</td>
+          <td>Busega Roundabout Park</td>
+          <td>Clearing a secondary drain</td>
+          <td><button type="button" class="btn btn-primary btn-small" onclick="alert('Demo only: you are registered as a volunteer for the Busega cleanup!');">Join as Volunteer</button></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <!-- Tool Loan Request Form (Member 11: Joan Ainembabazi) -->
+    <div class="form-box form-spaced">
+      <h2 class="sub-title">2. Local Council (LC1) Tool Bank Loan Request</h2>
+      <p class="table-intro">Local council leaders and youth groups can request cleaning gear for a cleanup:</p>
+
+      <form action="#" method="post" onsubmit="alert('Demo only: tool loan request submitted. A depot would contact the LC1 Chairman within 24 hours.'); return false;">
+        <div class="form-group">
+          <label for="org_name">LC1 Zone / Youth Group Name *</label>
+          <input type="text" id="org_name" name="org_name" class="form-control" placeholder="e.g., Bwaise II Youth Environmental Association" required>
+        </div>
+
+        <div class="form-group">
+          <label for="leader_contact">Coordinator Name &amp; Phone Number *</label>
+          <input type="text" id="leader_contact" name="leader_contact" class="form-control" placeholder="e.g., John Kato (0772 123 456)" required>
+        </div>
+
+        <div class="two-col">
+          <div class="form-group">
+            <label for="wheelbarrows">Wheelbarrows Needed</label>
+            <input type="number" id="wheelbarrows" name="wheelbarrows" class="form-control" min="1" max="20" value="5">
+          </div>
+          <div class="form-group">
+            <label for="rakes">Rakes &amp; Shovels Needed</label>
+            <input type="number" id="rakes" name="rakes" class="form-control" min="1" max="40" value="10">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="gumboots">Pairs of Heavy Gumboots</label>
+          <input type="number" id="gumboots" name="gumboots" class="form-control" min="1" max="30" value="15">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Submit Tool Loan Request &rarr;</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Global Footer (Member 12: Brian Ochieng) -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>About Kampala CleanConnect</h4>
+        <p>A student-built portal responding to Greater Kampala's waste problem after the Kiteezi landfill collapse. Built for Victoria University Coursework Project 2.</p>
+        <p class="footer-note"><strong>Demo notice:</strong> this site has no live hotline. Listings, numbers and figures are sample data. For real sanitation issues, contact KCCA through kcca.go.ug.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home Portal</a></li>
+          <li><a href="report.html">Report Illegal Dumpsite</a></li>
+          <li><a href="directory.html">Collectors, Tariffs &amp; Recyclers</a></li>
+          <li><a href="guide.html">Waste Sorting &amp; Composting</a></li>
+          <li><a href="cleanups.html">Community Clean-Up Drives</a></li>
+          <li><a href="dashboard.html">City Status Dashboard</a></li>
+          <li><a href="about.html#sources">Sources &amp; Credits</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Academic Project Notice</h4>
+        <p>Victoria University Kampala</p>
+        <p>Faculty of Science &amp; Technology</p>
+        <p>Module: Internet Technology &amp; Web Design</p>
+        <p>Facilitator: Olivia Najjemba</p>
+        <p>Group 12 (Lead: Stephen Asiimwe)</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Kampala CleanConnect &bull; Victoria University Group Project 2 &bull; Hosted on GitHub Pages
+    </div>
+  </footer>
+
+</body>
+</html>
