@@ -17,7 +17,7 @@
     [SAMPLE ALERT] Example notice: crews clearing drainage culverts along Lubigi Channel in Kawempe. Report blockages below.
   </div>
 
-  <!-- Global Header & Navigation (Members 1 & 12: Stephen Asiimwe & Brian Ochieng) -->
+  <!-- Global Header & Navigation (Members 1 & 12: Stephen Asiimwe & Adrian Kaboole Elisha) -->
   <header>
     <div class="header-container">
       <a href="index.html" class="brand">
@@ -51,12 +51,12 @@
     <h1 class="section-title">Waste Collectors, Tariffs &amp; Recyclers</h1>
     <p class="section-sub">Find a collector for your division, compare sample monthly rates, and locate plastic buy-back points.</p>
 
-    <p class="data-notice"><strong>Sample data:</strong> company names, phone numbers, rates and prices on this page are illustrative placeholders made for the coursework demo. They are not real KCCA records. Confirm real collectors and fees with KCCA.</p>
+    <p class="data-notice"><strong>Disclaimer:</strong> Company names, phone numbers, rates and prices on this page are illustrative placeholders made for the coursework demo. They are not real KCCA records. Confirm real collectors and fees with KCCA.</p>
 
-    <!-- Search & Filter Bar (Member 5: Patience Atuhaire) -->
+    <!-- Search & Filter Bar (Member 5: Sherura Samuel) -->
     <div class="filter-bar">
       <label for="filter-div">Filter by Division:</label>
-      <select id="filter-div" class="form-control" onchange="filterHaulers()">
+      <select id="filter-div" class="form-control">
         <option value="all">All Divisions</option>
         <option value="kawempe">Kawempe Division</option>
         <option value="makindye">Makindye Division</option>
@@ -65,11 +65,11 @@
         <option value="central">Central Division</option>
         <option value="kasangati">Kasangati Town Council</option>
       </select>
-      <button type="button" class="btn btn-primary" onclick="filterHaulers()">Filter Results</button>
+      <button type="button" class="btn btn-primary">Filter Results</button>
     </div>
     <p id="filter-msg" class="filter-msg" aria-live="polite">Showing all collectors.</p>
 
-    <!-- Collectors Table (Member 6: Emmanuel Okello) -->
+    <!-- Collectors Table (Member 6:  Nassiwa Gloria) -->
     <h2 class="sub-title">1. Waste Collectors Directory (Sample)</h2>
     <div class="table-wrap">
     <table class="data-table" id="haulers-table">
@@ -122,7 +122,7 @@
     </table>
     </div>
 
-    <!-- Tariff Matrix (Member 7: Sarah Kembabazi) -->
+    <!-- Tariff Matrix (Member 7: Katusiime Allen) -->
     <h2 class="sub-title">2. Sample Monthly Tariff Schedule</h2>
     <p class="table-intro">Illustrative monthly collection rates used to show how a fair-price table would look. Real fees should be confirmed with KCCA before paying.</p>
     <div class="table-wrap">
@@ -164,7 +164,7 @@
     </table>
     </div>
 
-    <!-- Recyclers Directory (CI-15, Member 7: Sarah Kembabazi) -->
+    <!-- Recyclers Directory (CI-15, Member 7: Katusiime Allen) -->
     <h2 class="sub-title">3. Plastic Buy-Back Points &amp; Scrap Depots (Sample)</h2>
     <p class="table-intro">Where sorted plastic and scrap can be sold. Prices change often, so ask the depot before you carry a load.</p>
     <div class="table-wrap">
@@ -207,23 +207,7 @@
     </div>
   </main>
 
-  <script>
-    // Shows only the collector rows that serve the chosen division.
-    function filterHaulers() {
-      var chosen = document.getElementById('filter-div').value;
-      var rows = document.querySelectorAll('#haulers-table tbody tr');
-      var shown = 0;
-      for (var i = 0; i < rows.length; i++) {
-        var divisions = rows[i].getAttribute('data-division').split(' ');
-        var match = (chosen === 'all') || (divisions.indexOf(chosen) !== -1);
-        rows[i].style.display = match ? '' : 'none';
-        if (match) { shown++; }
-      }
-      document.getElementById('filter-msg').textContent = 'Showing ' + shown + ' of ' + rows.length + ' collectors.';
-    }
-  </script>
-
-  <!-- Global Footer (Member 12: Brian Ochieng) -->
+  <!-- Global Footer (Member 12: Adrian Kaboole Elisha) -->
   <footer>
     <div class="footer-container">
       <div class="footer-col">
